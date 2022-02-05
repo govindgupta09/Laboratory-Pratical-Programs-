@@ -1,0 +1,18 @@
+// Finding intersection of two Sets...
+
+
+
+
+#include<stdio.h>
+void main()
+{
+    int i,j,k=0,a[]={3,5,9,4,10,1},b[]={1,2,3,4,5},c[5];
+    for(i=0;i<6;i++) // loop for a[6]
+    {
+        for(j=0;j<5;j++) // loop for b[5]
+            if(a[i]==b[j])
+            c[k++]=a[i];            
+    }
+    for(i=0;i<4;i++)
+    printf("%d ",c[i]);
+}
