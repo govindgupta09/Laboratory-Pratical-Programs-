@@ -1,0 +1,24 @@
+// Finding union of two Sets..
+
+
+
+#include<stdio.h>
+void main()
+{
+    int i,j,k,A[]={1,5,2,25,3},B[]={3,6,8,2,11,9,4},C[10];
+    for(i=0;i<7;i++) // 6 is number of elements in B[].
+    C[i]=B[i]; 
+    k=7;      // for pointing index next to C[i]
+    for(i=0;i<5;i++)
+    {
+        int found=0;
+        for(j=0;j<6 && !found ;j++)
+        if(A[i]==B[j])
+        found=1;
+
+        if(!found)  
+        C[k++]=A[i];
+    }
+    for(i=0;i<10;i++)
+    printf("%d  ",C[i]);
+}
