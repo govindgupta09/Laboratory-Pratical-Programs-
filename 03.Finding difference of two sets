@@ -1,0 +1,23 @@
+// Finding difference of two sets...
+
+
+
+
+
+#include<stdio.h>
+void main()
+{
+    int i,j,k=0,found,a[]={2,4,5,1,8,7,3},b[]={1,6,5,2,7,9,10,11},c[5];
+    for(i=0;i<7;i++)
+    {
+        found=0;
+        for(j=0;j<8 && !found;j++)
+        if(a[i]==b[j])
+        found=1;
+
+        if(!found)
+        c[k++]=a[i];
+    }   
+    for(i=0;i<3;i++)
+    printf("%d ",c[i]);
+}
