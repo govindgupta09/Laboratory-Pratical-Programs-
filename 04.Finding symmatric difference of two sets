@@ -1,0 +1,58 @@
+// Finding symmatric difference of two sets..
+
+
+
+
+
+
+
+#include<stdio.h>
+void main()
+{
+    int i,j,k,found,a[]={2,8,6,5,7},b[]={1,9,6,4,2},c[10],d[5],e[10];
+    for(i=0;i<5;i++)
+    c[i]=b[i];
+
+    k=5;
+    for(i=0;i<5;i++)
+    {
+        found=0;
+        for(j=0;j<5 && !found;j++)
+        if(a[i]==b[j])
+        found=1;
+
+        if(!found)
+        c[k++]=a[i];
+    }
+    printf("union of sets is:-\n");
+    for(i=0;i<8;i++)
+    printf("%d ",c[i]);
+
+    printf("\n");
+
+    for(int m=0,x=0;m<5;m++)
+    {
+        for(int n=0;n<5;n++)
+        if(a[m]==b[n])
+        d[x++]=a[m];
+    }
+    printf("intersection of sets is:- \n");
+    for(i=0;i<2;i++)
+    printf("%d ",d[i]);
+
+    printf("\n");
+
+    for(int y=0,i=0;i<8;i++)
+    {
+        found=0;
+        for(j=0;j<5 && !found;j++)
+        if(c[i]==d[j])
+        found=1;
+
+        if(!found)
+        e[y++]=c[i];
+    }
+    printf("Symmatric difference of two given sets is:-\n");
+    for(i=0;i<6;i++)
+    printf("%d ",e[i]);
+}
