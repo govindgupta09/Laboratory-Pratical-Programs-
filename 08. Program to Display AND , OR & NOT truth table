@@ -1,0 +1,44 @@
+// Program to Display AND , OR & NOT truth table..
+
+
+
+
+
+#include<stdio.h>
+void main()
+{
+    int i,j,n1,n2,a[]={0,0,1,1},b[]={0,1,0,1},c[5],d[5],e[5],f[5];
+    printf("Enter size of first set:- ");
+    scanf("%d",&n1);
+    printf("Enter binary elments of this set:-\n");
+    for(i=0;i<n1;i++)
+    printf("%d ",a[i]);
+
+    printf("\nSecond set:-\n");
+    for(i=0;i<4;i++)
+    printf("%d ",b[i]);
+    for(i=0;i<4;i++)
+    {
+        c[i]= a[i] && b[i];
+        d[i]= a[i] || b[i]; 
+        e[i]= !a[i];
+        f[i]= !b[i];
+    }
+    printf("\nAND truth Table of above set:-\n");
+    for(i=0;i<4;i++)
+    printf("%d ",c[i]);
+
+    printf("\nOR truth table of above set:-\n");
+    for(i=0;i<4;i++)
+    printf("%d ",d[i]);
+
+    printf("\nNOT truth table of first set:-\n");
+    for(i=0;i<4;i++)
+    printf("%d ",e[i]);
+
+    printf("\nNOT truth table of second set:-\n");
+    for(i=0;i<4;i++)
+    printf("%d ",f[i]);
+}
+
+
