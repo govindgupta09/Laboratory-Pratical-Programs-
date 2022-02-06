@@ -1,0 +1,25 @@
+// Program to change binary code to gray code..
+
+
+
+
+
+
+#include<stdio.h>
+void main()
+{
+    int i,arr[4],arr1[4];
+    printf("Enter binary number:\n");
+    for(i=0;i<4;i++)
+    scanf("%d",&arr[i]);
+    for(i=0;i<4;i++)
+    {
+        if(i==0)
+        arr1[i]=arr[i];
+        else
+        arr1[i]=arr[i]^arr[i-1];
+    }
+    printf("Gray code is:\n");
+    for(i=0;i<4;i++)
+    printf("%d",arr1[i]);
+}
