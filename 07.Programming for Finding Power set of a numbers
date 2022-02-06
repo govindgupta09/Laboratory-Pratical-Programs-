@@ -1,0 +1,36 @@
+// Programming for Finding Power set of a numbers..
+
+
+
+
+
+
+#include <stdio.h> 
+#include <math.h>   
+void printPowerSet(int *set, int set_size) 
+{
+    int i,j;
+    for(i=0;i<pow(2,set_size);i++) 
+    { 
+      for(j=0;j<set_size;j++) 
+       { 
+        //Check if jth bit in the counter is set If set then print jth element from set. 
+        if(i & (1<<j)) // left shift means multiply 1 by pow(2,j) ie. 1* 2**j
+        printf("%d", set[j]); 
+       } 
+       printf(" "); 
+    } 
+}   
+int main() 
+{ 
+    int i,n,set[100];
+    printf("Enter the size of set :- ");
+    scanf("%d",&n);
+    printf("Enter the elements of set:-\n"); 
+    for(i=0;i<n;i++)
+    scanf("%d ",&set[i]);
+    printf("Power set of your given set is:-\n");
+    printPowerSet(set, n);  // function call.
+    return(0);
+}
+
