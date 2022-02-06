@@ -1,0 +1,39 @@
+
+// Name          -  Govind Gupta
+// Roll No.      -  2007350130016
+// Branch & Year -  IT  2nd Year
+// Subject Code  -  Data Structure using C (KCS351)
+
+
+
+// Implementation of Insertion Sort..
+
+
+
+
+
+#include<stdio.h>
+void main()
+{
+    int i,j,temp,n,count=0;
+    printf("Enter the size of array: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter elements of array to sort:\n");
+    for(i=0;i<n;i++)
+    scanf("%d",&arr[i]);
+    for(i=1;i<n;i++) 
+    {
+        temp=arr[i];
+        for(j=i-1;j>=0 && temp<arr[j];j--){
+        arr[j+1]=arr[j];
+        count++;
+        }
+        arr[j+1]=temp;
+    }
+    printf("Sorted list of given elements: ");
+    for(i=0;i<n;i++)
+    printf("%d ",arr[i]);
+    printf("\nNumber of passes is: %d",count);
+}
+
