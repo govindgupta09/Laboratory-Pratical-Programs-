@@ -1,0 +1,31 @@
+// Implementation of half adder..
+
+
+
+
+
+
+#include<stdio.h>
+void main()
+{
+    int n=4,arr1[n],arr2[n],sum[n],carry[n],i;
+    printf("Enter First Binary number one by one for addition:\n");
+    for(i=0;i<n;i++)
+    scanf("%d",&arr1[i]);
+    printf("Enter second binary number one by one for adding:\n");
+    for(i=0;i<n;i++)
+    scanf("%d",&arr2[i]);
+    for(i=0;i<n;i++)
+    {
+        sum[i]=((arr1[i] && !arr2[i]) || (!(arr1[i]) && arr2[i]));
+        carry[i]=(arr1[i] && arr2[i]);
+    }
+    printf("\nSum of given binary code is:");
+    for(i=0;i<n;i++)   
+    printf("%d ",sum[i]);
+    
+    printf("\nCarry of given binary code is:");
+    for(i=0;i<n;i++)
+    printf("%d ",carry[i]);
+
+}
